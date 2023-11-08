@@ -13,7 +13,7 @@
                 script {
 			 	def jmxFileName = "${params.JMX_FILE_NAME}"
                  	   	def jenkinsParameters = "${params.JENKINS_PARAMETERS}"
-                    		currentBuild.description = "#${BUILD_NUMBER}, branch ${jmxFileName}"
+   				currentBuild.displayName = jmxFileName
 				bat 'docker build -t jmeter_devops ./'
 			
 				
