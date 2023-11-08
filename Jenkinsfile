@@ -43,6 +43,7 @@
 	  post {
         always {
           bat "docker system prune --all"
+	  bat "Y"	
     steps {
         deleteDir()
     }
