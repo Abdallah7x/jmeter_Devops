@@ -11,7 +11,11 @@
         stage ('Build test Docker') {
             steps {
                 script {
+			 	def jmxFileName = "${params.JMX_FILE_NAME}"
+                 	   	def jenkinsParameters = "${params.JENKINS_PARAMETERS}"
+                    		currentBuild.description = "#${BUILD_NUMBER}, branch ${jmxFileName}"
 				bat 'docker build -t jmeter_devops ./'
+			
 				
                      }
             }
