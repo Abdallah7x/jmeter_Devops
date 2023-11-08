@@ -40,4 +40,13 @@
         }
 		
 		}
+	  post {
+        always {
+          bat "docker system prune --all"
+	stage('Clear Workspace') {
+    steps {
+        deleteDir()
+    }
+}
+        }
 	}
