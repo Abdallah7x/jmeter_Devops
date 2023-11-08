@@ -11,7 +11,7 @@
         stage ('Build test Docker') {
             steps {
                 script {
-				bat 'docker build -t jmeter_Devops ./'
+				bat 'docker build -t jmeter_devops ./'
 				
                      }
             }
@@ -20,7 +20,7 @@
         stage ('Run Jmeter Docker') {
             steps {
 				script{
-                bat 'docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter_Devops opensource-orangehrmlive.jmx' 
+                bat 'docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter_devops opensource-orangehrmlive.jmx' 
                 
 				}
 			}
