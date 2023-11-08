@@ -22,7 +22,7 @@
 				script{
 		def jmxFileName = "${params.JMX_FILE_NAME}"
 		def jenkinsParameters = "${params.JENKINS_PARAMETERS}"
-                bat "docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter_devops ${jmxFileName}.jmx ${jenkinsParameters}"
+                bat "docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter_devops ${jmxFileName}"
                 
 				}
 			}
