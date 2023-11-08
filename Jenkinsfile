@@ -20,10 +20,21 @@
         stage ('Run Jmeter Docker') {
             steps {
 				script{
+
+					parallel(
+      a: {
+        
 		def jmxFileName = "${params.JMX_FILE_NAME}"
 		def jenkinsParameters = "${params.JENKINS_PARAMETERS}"
                 bat "docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter_devops ${jmxFileName}"
-                
+      },
+      b: {
+        echo "This is branch b"
+	echo "This is branch bb"
+	echo "This is branch bbb"
+	echo "This is branch bbbb"      
+      }
+    )
 				}
 			}
         }
