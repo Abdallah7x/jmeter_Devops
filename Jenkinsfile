@@ -43,9 +43,8 @@
 	  post {
         always {
           bat "docker system prune --all -f"
-    steps {
-        deleteDir()
-    }
+	  deleteDir()
+    
 
         }
 	}
